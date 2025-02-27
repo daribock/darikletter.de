@@ -1,27 +1,26 @@
-import Image from 'next/image';
+import RotatingText from '@/components/RotatingText';
 
 export default function Home() {
   return (
-    <div className="">
-      <h2>About me</h2>
-      <article className="prose lg:prose-xl">
-        <p className="lead">
-          👋 Hi, I'm Darius Kletter, a follower of Jesus Christ who loves to
-          help others and the ability to code.
-        </p>
-
-        <p>
-          an Associate Software Engineer at MediaMarktSaturn with a passion for
-          designing and solving problems. I love tackling challenges and
-          creating efficient, user-friendly solutions. 📖 In my free time, I
-          enjoy reading the Bible and volunteering at my local church, Betania
-          Ingolstadt. Giving back to the community and growing in faith are
-          important aspects of my life. 📝 I'm also passionate about
-          note-taking—documenting my thoughts, experiences, and lessons learned.
-          My go-to tool for this is Obsidian (highly recommended!). 📫 Want to
-          get in touch? Feel free to reach out at daribock@gmail.com.
-        </p>
-      </article>
+    <div className="font-bold text-2xl">
+      <span className="block pb-2">👋 Hi, I'm Darius Kletter, a</span>
+      <RotatingText
+        texts={[
+          'follower of Jesus',
+          'husband',
+          'frontend developer',
+          'guitarist',
+        ]}
+        mainClassName="px-2 sm:px-2 md:px-3 bg-yellow-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-start rounded-lg"
+        staggerFrom={'last'}
+        initial={{ y: '100%' }}
+        animate={{ y: 0 }}
+        exit={{ y: '-120%' }}
+        staggerDuration={0.025}
+        splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+        transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+        rotationInterval={2000}
+      />
     </div>
   );
 }

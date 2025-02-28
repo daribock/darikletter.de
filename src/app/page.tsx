@@ -3,7 +3,7 @@ import RotatingText from '@/components/RotatingText';
 export default function Home() {
   return (
     <div className="font-bold text-2xl">
-      <span className="block pb-2">👋 Hi, I'm Darius Kletter, a</span>
+      <span className="block pb-2">👋 Hi, I&apos;m Darius Kletter, a</span>
       <RotatingText
         texts={[
           'follower of Jesus',

@@ -1,14 +1,16 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Navbar } from "./components/nav";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import Footer from "./components/footer";
-import { ThemeProvider } from "./components/theme-switch";
-import { metaData } from "./lib/config";
+import type { Metadata, Viewport } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
+import { Header } from './header';
+import { Footer } from './footer';
+import { ThemeProvider } from 'next-themes';
+import { metaData } from '@/lib/data';
 
-const inter = Inter({ subsets: ["latin"] });
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#ffffff',
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(metaData.baseUrl),
@@ -18,13 +20,13 @@ export const metadata: Metadata = {
   },
   description: metaData.description,
   openGraph: {
-    images: metaData.ogImage,
+    // images: metaData.ogImage,
     title: metaData.title,
     description: metaData.description,
     url: metaData.baseUrl,
     siteName: metaData.name,
-    locale: "en_US",
-    type: "website",
+    locale: 'en_US',
+    type: 'website',
   },
   robots: {
     index: true,
@@ -32,61 +34,49 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
-  twitter: {
-    title: metaData.name,
-    card: "summary_large_image",
-  },
   icons: {
-    icon: "/favicon.ico",
+    icon: '/favicon.ico',
   },
 };
 
+const geist = Geist({
+  variable: '--font-geist',
+  subsets: ['latin'],
+});
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+});
+
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="en" className={`${inter.className}`}>
-      <head>
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          href="/rss.xml"
-          title="RSS Feed"
-        />
-        <link
-          rel="alternate"
-          type="application/atom+xml"
-          href="/atom.xml"
-          title="Atom Feed"
-        />
-        <link
-          rel="alternate"
-          type="application/feed+json"
-          href="/feed.json"
-          title="JSON Feed"
-        />
-      </head>
-      <body className="antialiased flex flex-col items-center justify-center mx-auto mt-2 lg:mt-8 mb-12">
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${geist.variable} ${geistMono.variable} bg-white tracking-tight antialiased dark:bg-zinc-950`}
+      >
         <ThemeProvider
+          enableSystem={true}
           attribute="class"
+          storageKey="theme"
           defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
         >
-          <main className="flex-auto min-w-0 mt-2 md:mt-6 flex flex-col px-6 sm:px-4 md:px-0 max-w-[624px] w-full">
-            <Navbar />
-            {children}
-            <Footer />
-            <Analytics />
-            <SpeedInsights />
-          </main>
+          <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
+            <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">
+              <Header />
+              {children}
+              <Footer />
+            </div>
+          </div>
         </ThemeProvider>
       </body>
     </html>

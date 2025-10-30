@@ -32,6 +32,12 @@ type SocialLink = {
   link: string;
 };
 
+type SocialLinks = {
+  github: SocialLink;
+  linkedin: SocialLink;
+  instagram: SocialLink;
+};
+
 export const PROJECTS: Project[] = [
   {
     name: 'Sonmez Döner Website',
@@ -39,6 +45,13 @@ export const PROJECTS: Project[] = [
       'The official website for Sonmez Döner, a popular döner kebab restaurant in Ingolstadt, Germany.',
     link: 'https://www.sonmezdoener.de/',
     id: '1',
+  },
+  {
+    name: 'RBTC Audio Converter',
+    description:
+      'A full-stack web application that converts WAV audio files to MP3 format with automated metadata tagging, email delivery, and background job processing for RBTC educational content.',
+    link: 'https://github.com/daribock/rbtc-audio-converter',
+    id: '2',
   },
 ];
 
@@ -62,20 +75,20 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 //   },
 // ]
 
-export const SOCIAL_LINKS: SocialLink[] = [
-  {
+export const socialLinks: SocialLinks = {
+  github: {
     label: 'Github',
     link: 'https://github.com/daribock',
   },
-  {
+  linkedin: {
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/darikletter',
   },
-  {
+  instagram: {
     label: 'Instagram',
     link: 'https://www.instagram.com/darikletter',
   },
-];
+};
 
 export const metaData = {
   baseUrl: 'https://darikletter.de',
@@ -83,7 +96,7 @@ export const metaData = {
   name: 'Darius Kletter',
   // ogImage: "/opengraph-image.png",
   description:
-    'Hi, I’m Darius Kletter, a web developer based in Ingolstadt. I’m passionate about using technology to serve people — building websites and tools that make a real difference.',
+    'Hi, I’m Darius Kletter, a software engineer based in Ingolstadt. I’m passionate about using technology to serve people — building websites and tools that make a real difference.',
 };
 
 export const EMAIL = 'darikletter@gmail.com';

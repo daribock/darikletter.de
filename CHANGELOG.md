@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.1.0](https://github.com/daribock/darikletter.de/compare/v1.0.0...v1.1.0) (2026-02-13)
+
+
+### Features
+
+* add first init of markdown blog ([5d8a840](https://github.com/daribock/darikletter.de/commit/5d8a8409b40c855593c945b4d790a68f256219b9))
+* add first init of markdown blog ([2e69b91](https://github.com/daribock/darikletter.de/commit/2e69b914f3ff15c531a657bc8dd49950eb2f7991))
+* add post components and first posts ([282b91d](https://github.com/daribock/darikletter.de/commit/282b91dff8543fe47f4f25e7361b27bb99db6b78))
+
+
+### Bug Fixes
+
+* linkedin link ([0c02158](https://github.com/daribock/darikletter.de/commit/0c0215876fd55c19bb5139dce1fb4ea16dddc56c))
+* personal image ([93b8cb3](https://github.com/daribock/darikletter.de/commit/93b8cb3f809cf0c2056487ecb9935c5a19e1e58f))
+* remove instagram link ([192efc6](https://github.com/daribock/darikletter.de/commit/192efc6f70c112aeefe4f2313a261edbacd953fc))
+
 ## 1.0.0 (2026-01-26)
 
 

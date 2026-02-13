@@ -11,7 +11,7 @@ export function Header() {
       <div className="flex items-center space-x-4">
         <Link href="/">
           <Image
-            src="/darikletter.png"
+            src="/assets/darikletter.png"
             width="200"
             height="200"
             alt="darikletter"

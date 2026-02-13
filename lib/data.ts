@@ -65,7 +65,7 @@ export const socialLinks: SocialLinks = {
   },
   linkedin: {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/darikletter',
+    link: 'https://www.linkedin.com/in/darius-kletter-439284255/',
   },
 };
 

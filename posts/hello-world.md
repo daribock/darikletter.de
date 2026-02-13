@@ -1,27 +1,18 @@
 ---
-title: 'hello-world'
-date: '2020-03-16T05:35:07.322Z'
+title: 'Hello World'
+date: '2026-02-13T09:28:07.322Z'
 slug: 'hello-world'
+coverImage: '/assets/blog/hello-world/hello-world.png'
+description: 'A test post to test the blog.'
 author:
   name: Darius Kletter
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo
-vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla
-facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue
-mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa
-massa ultricies.
+This is a test post to test the functionality of this blog. Hello World!
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl
-tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas
-tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus
-feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras.
-Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in
-pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas
-diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc
-sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut
-morbi tincidunt augue interdum velit euismod.
+```js
+const test: string = test
+```
 
 ## Lorem Ipsum
 

@@ -86,7 +86,7 @@ export function AnimatedBackground({
           )}
         </AnimatePresence>
         <div className="z-10">{child.props.children}</div>
-      </>
+      </>,
     );
   });
 }

@@ -1,21 +1,14 @@
-export const metadata = {
-  title:
-    'how-can-you-use-i18next-with-yup-to-get-clean-translated-validation-errors',
-  description:
-    'Design and artificial intelligence (AI) are increasingly intertwined, driving innovation across industries. As technology evolves, the role of design engineering is more critical than ever, bridging creativity and functionality.',
-  alternates: {
-    canonical:
-      '/blog/how-can-you-use-i18next-with-yup-to-get-clean-translated-validation-errors',
-  },
-};
+---
+title: 'How can you use i18next with Yup to get clean, translated validation errors?'
+date: '2026-02-13T09:56:07.322Z'
+slug: 'hello-world'
+description: 'Form validation with Yup, react-hook-form, and i18next often starts simple—and
+quickly turns messy.'
+author:
+  name: Darius Kletter
+---
 
-{/* <Cover
-  src="https://cdn.cosmos.so/affd4b79-e848-4dfd-bd42-5f2c4a847365?format=jpeg"
-  alt="Image from the movie Alien - from cosmos.com"
-  caption="cosmos.com"
-/>  */}
-
-## How can you use i18next with Yup to get clean, translated validation errors?
+# How can you use i18next with Yup to get clean, translated validation errors?
 
 Form validation with **Yup**, **react-hook-form**, and **i18next** often starts
 simple—and quickly turns messy.
@@ -29,7 +22,7 @@ The key is **Yup’s global `setLocale` configuration**. It lets you define all
 validation messages once and automatically apply them everywhere — fully
 translated and consistent.
 
-### The Problem (What usually goes wrong)
+## The Problem (What usually goes wrong)
 
 ```ts
 const schema = yup.object({
@@ -57,9 +50,9 @@ big unmaintainable mess.
 
 Here is how you can solve it!
 
-### The Solution: Global Yup Locale + i18next
+## The Solution: Global Yup Locale + i18next
 
-#### 1️⃣ Configure Yup once (with translations)
+### 1️⃣ Configure Yup once (with translations)
 
 ```ts
 import { useEffect } from 'react';
@@ -92,11 +85,10 @@ export const useYupLocale = () => {
 };
 ```
 
-✅ Yup automatically replaces `${min}` / `${max}`
+✅ Yup automatically replaces `${min}` / `${max}` ✅ Messages update instantly
+when the language changes
 
-✅ Messages update instantly when the language changes
-
-#### 2️⃣ Translation files
+### 2️⃣ Translation files
 
 ```json
 // en.json
@@ -124,7 +116,7 @@ export const useYupLocale = () => {
 }
 ```
 
-#### 3️⃣ Initialize once at app level
+### 3️⃣ Initialize once at app level
 
 ```ts
 export const App = () => {
@@ -134,7 +126,7 @@ export const App = () => {
 };
 ```
 
-### The Result: Clean, readable schemas
+## The Result: Clean, readable schemas
 
 ```ts
 const schema = yup.object({
@@ -150,13 +142,13 @@ No duplication.
 
 Still fully localized.
 
-### Custom messages? Still possible
+## Custom messages? Still possible
 
 ```ts
 confirmPassword: yup.string().required(t('validation.passwordMatch'));
 ```
 
-### Benefits
+## Benefits
 
 - ✅ **DRY** – define messages once
 - ✅ **Consistent** validation across all forms
@@ -165,7 +157,7 @@ confirmPassword: yup.string().required(t('validation.passwordMatch'));
 - ✅ **Much cleaner schemas**
 - ✅ **Better developer experience**
 
-### Takeaway
+## Takeaway
 
 If you use **Yup + i18next**, configuring Yup’s global locale is the cleanest
 way to get **translated, consistent, and maintainable validation errors**.

@@ -1,6 +1,6 @@
 import markdownToHtml from '@/lib/markdown-to-html';
 import { getAllPosts, getPostBySlug } from '@/lib/posts';
-import { cn, formatDate } from '@/lib/utils';
+import { cn } from '@/lib/utils';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
@@ -29,15 +29,11 @@ export default async function Post(props: Params) {
             height={630}
           />
         )}
-        <h1 className="title font-semibold text-2xl tracking-tighter">
-          {post.title}
-        </h1>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          {formatDate(post.date)}
-        </p>
+        <h1>{post.title}</h1>
+        <p>{post.date}</p>
       </header>
       <article>
-        <div className="max-w-2xl mx-auto">
+        <div>
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       </article>

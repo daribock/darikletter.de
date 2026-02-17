@@ -2,7 +2,7 @@
 
 ## Build
 
-- [Nextjs](https://nextjs.org/) 
+- [Nextjs](https://nextjs.org/)
 - [Tailwindcss](https://tailwindcss.com/) for styling
 - [Motion-Primitives](https://motion-primitives.com) for animated components.
 

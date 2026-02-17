@@ -3,5 +3,5 @@ export default function LayoutBlogPost({
 }: {
   children: React.ReactNode;
 }) {
-  return <main className="mt-24">{children}</main>;
+  return <main>{children}</main>;
 }

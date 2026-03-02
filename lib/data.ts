@@ -20,13 +20,6 @@ type WorkExperience = {
   id: string;
 };
 
-// type BlogPost = {
-//   title: string;
-//   description: string;
-//   link: string;
-//   uid: string;
-// };
-
 type SocialLink = {
   label: string;
   link: string;
@@ -35,7 +28,6 @@ type SocialLink = {
 type SocialLinks = {
   github: SocialLink;
   linkedin: SocialLink;
-  instagram: SocialLink;
 };
 
 export const PROJECTS: Project[] = [
@@ -66,15 +58,6 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
 ];
 
-// export const BLOG_POSTS: BlogPost[] = [
-//   {
-//     title: 'How to Export Metadata from MDX for Next.js SEO',
-//     description: 'A guide on exporting metadata from MDX files to leverage Next.js SEO features.',
-//     link: '/blog/example-mdx-metadata',
-//     uid: 'blog-4',
-//   },
-// ]
-
 export const socialLinks: SocialLinks = {
   github: {
     label: 'Github',
@@ -82,11 +65,7 @@ export const socialLinks: SocialLinks = {
   },
   linkedin: {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/darikletter',
-  },
-  instagram: {
-    label: 'Instagram',
-    link: 'https://www.instagram.com/darikletter',
+    link: 'https://www.linkedin.com/in/darius-kletter-439284255/',
   },
 };
 

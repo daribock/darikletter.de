@@ -6,6 +6,11 @@ description: 'Form validation with Yup, react-hook-form, and i18next often start
 quickly turns messy.'
 author:
   name: Darius Kletter
+tags:
+  - react
+  - i18next
+  - validation
+  - yup
 ---
 
 # How can you use i18next with Yup to get clean, translated validation errors?

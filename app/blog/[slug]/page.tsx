@@ -3,6 +3,7 @@ import { getAllPosts, getPostBySlug } from '@/lib/posts';
 import { cn, formatDate } from '@/lib/utils';
 import { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 export default async function Post(props: Params) {
@@ -35,6 +36,19 @@ export default async function Post(props: Params) {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           {formatDate(post.date)}
         </p>
+        {post.tags && post.tags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mt-3">
+            {post.tags.map((tag) => (
+              <Link
+                key={tag}
+                href={`/blog/tag/${tag}`}
+                className="px-3 py-1 text-sm bg-zinc-100 dark:bg-zinc-800 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
+              >
+                {tag}
+              </Link>
+            ))}
+          </div>
+        )}
       </header>
       <article>
         <div className="max-w-2xl mx-auto">

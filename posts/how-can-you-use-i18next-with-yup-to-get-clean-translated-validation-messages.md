@@ -1,14 +1,17 @@
 ---
-title: 'How can you use i18next with Yup to get clean, translated validation errors?'
+title: 'How can you use i18next with Yup to get clean, translated validation messages?'
 date: '2026-02-13T09:56:07.322Z'
-slug: 'hello-world'
+slug: 'how-can-you-use-i18next-with-yup-to-get-clean-translated-validation-messages'
 description: 'Form validation with Yup, react-hook-form, and i18next often starts simple—and
 quickly turns messy.'
 author:
   name: Darius Kletter
+tags:
+  - react
+  - i18next
+  - validation
+  - yup
 ---
-
-# How can you use i18next with Yup to get clean, translated validation errors?
 
 Form validation with **Yup**, **react-hook-form**, and **i18next** often starts
 simple—and quickly turns messy.
@@ -160,7 +163,7 @@ confirmPassword: yup.string().required(t('validation.passwordMatch'));
 ## Takeaway
 
 If you use **Yup + i18next**, configuring Yup’s global locale is the cleanest
-way to get **translated, consistent, and maintainable validation errors**.
+way to get **translated, consistent, and maintainable validation messages**.
 
 You focus on validation logic.
 

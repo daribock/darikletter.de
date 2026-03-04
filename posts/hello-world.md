@@ -6,6 +6,9 @@ coverImage: '/assets/blog/hello-world/hello-world.png'
 description: 'A test post to test the blog.'
 author:
   name: Darius Kletter
+tags:
+  - test
+  - introduction
 ---
 
 This is a test post to test the functionality of this blog. Hello World!

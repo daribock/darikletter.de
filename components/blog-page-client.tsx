@@ -20,7 +20,7 @@ export default function BlogPageClient({ allPosts }: { allPosts: Post[] }) {
       (post) =>
         post.title.toLowerCase().includes(query) ||
         post.description.toLowerCase().includes(query) ||
-        post.tags?.some((tag) => tag.toLowerCase().includes(query))
+        post.tags?.some((tag) => tag.toLowerCase().includes(query)),
     );
   }, [allPosts, searchQuery]);
 

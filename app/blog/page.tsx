@@ -1,5 +1,5 @@
 import { getAllPosts } from '@/lib/posts';
-import PostList from '@/components/post-list';
+import BlogPageClient from '@/components/blog-page-client';
 
 export default function Index() {
   const allPosts = getAllPosts();
@@ -7,9 +7,7 @@ export default function Index() {
   return (
     <section>
       <h3 className="mb-3 text-lg font-medium">Blog</h3>
-      <div className="flex flex-col space-y-0">
-        <PostList allPosts={allPosts} />
-      </div>
+      <BlogPageClient allPosts={allPosts} />
     </section>
   );
 }

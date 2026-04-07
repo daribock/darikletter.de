@@ -18,3 +18,12 @@ result.
 ## Credits
 
 Inspired by https://github.com/ibelick/nim
+
+## License
+
+This project uses a dual license:
+
+- **Code** — [MIT License](./LICENSE): free to use, modify, and distribute.
+- **Content** (texts & images) — [CC BY-NC-ND 4.0](./LICENSE): you may quote and share with attribution, but commercial use and modifications are not permitted.
+
+See [LICENSE](./LICENSE) for the full license texts.

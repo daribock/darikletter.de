@@ -12,8 +12,6 @@ import {
   metaData,
 } from '../../lib/data';
 import Link from 'next/link';
-import { AnimatedBackground } from '@/components/ui/animated-background';
-import PostListItem from '../post-list-item';
 import { ReactNode } from 'react';
 
 interface HomeProps {
@@ -196,9 +194,9 @@ export default function Home({ postList }: HomeProps) {
         <h3 className="mb-5 text-lg font-medium">Connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
           Feel free to contact me at{' '}
-          <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
+          <Link className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
             {EMAIL}
-          </a>
+          </Link>
         </p>
         <div className="flex items-center justify-start space-x-3">
           {Object.values(socialLinks).map((link) => (

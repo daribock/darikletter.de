@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.0](https://github.com/daribock/darikletter.de/compare/v1.1.0...v1.2.0) (2026-07-06)
+
+
+### Features
+
+* add Dependabot auto-merge workflow ([0cf7fbf](https://github.com/daribock/darikletter.de/commit/0cf7fbf23ff28d6a344805019e28e2e627c3a6f2))
+* add Dependabot auto-merge workflow ([c044008](https://github.com/daribock/darikletter.de/commit/c04400813d70e97633b716e1cb72f6be39eb06fe))
+* Add tags and pagination with search functionality to blog ([7a00fc6](https://github.com/daribock/darikletter.de/commit/7a00fc64fb0dbc8e35699e8fa85926448609b0ab))
+
+
+### Bug Fixes
+
+* remove package-lock.json ([3311c3f](https://github.com/daribock/darikletter.de/commit/3311c3f1a4462a73abc2900c9dfc3fe2dc5bc7c2))
+
 ## [1.1.0](https://github.com/daribock/darikletter.de/compare/v1.0.0...v1.1.0) (2026-02-13)
 
 
